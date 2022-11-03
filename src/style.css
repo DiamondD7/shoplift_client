@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #e2e2e2;
+  font-family: "DM Sans", sans-serif;
+}
+
+.header-2 {
+  position: absolute;
+  bottom: 0;
+  left: 910px;
+
+  font-size: 64px;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.header-3 {
+  position: absolute;
+  bottom: -100px;
+  right: 300px;
+
+  font-weight: 300;
+  font-size: 34px;
+  width: 350px;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.hero-background {
+  display: flex;
+
+  width: 100vw;
+  height: 800px;
+}
+
+.hero-background-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+
+  background-position: center;
+
+  width: 30vw;
+  height: 100%;
+}
+
+.hero-background-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1511556820780-d912e42b4980?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+
+  background-position: center;
+
+  width: 35vw;
+  height: 100%;
+}
+
+.hero-background-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+
+  background-position: center;
+
+  width: 35vw;
+  height: 100%;
+}
+
+.introduction-hero {
+  position: absolute;
+  top: 35%;
+  left: 47.5%;
+
+  transform: translate(-50%, -50%);
+}
+
+.introduction-hero h1 {
+  font-size: 99px;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+/* .introduction-hero button {
+  padding: 20px;
+  width: 200px;
+
+  background-color: transparent;
+  border: 1px solid #e2e2e2;
+
+  border-radius: 10px;
+  font-size: 34px;
+} */
+
+.btn-browse {
+  padding: 10px 40px 10px 40px;
+  width: 230px;
+
+  background-color: transparent;
+  border: 1px solid #e2e2e2;
+
+  border-radius: 50px;
+  font-size: 34px;
+  margin-left: 30px;
+
+  cursor: pointer;
+}
+
+.btn-browse:hover {
+  background-color: #e2e2e2;
+  border: 1px solid #e2e2e2;
+  color: black;
+}
+
+.btn-clearance {
+  padding: 10px 40px 10px 40px;
+  width: 200px;
+
+  background-color: transparent;
+  border: none;
+
+  border-radius: 10px;
+  font-size: 34px;
+
+  margin-left: 65px;
+
+  cursor: pointer;
+}
+
+/* --------------------TECH ADVERTISING------------------ */
+
+.tech-advert {
+  margin: 50px 0 50px 50px;
+
+  background-image: url(https://images.unsplash.com/photo-1603389335957-10bea39c9d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-size: cover;
+  background-position: center bottom;
+  height: 500px;
+  width: 500px;
+}
+
+.tech-advert:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1603389335957-10bea39c9d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+}
+
+.tech-advert > p {
+  opacity: 0;
+  font-size: 48px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.tech-advert:hover > p {
+  opacity: 1;
+}
+
+.tech-advert > .sale-browse {
+  opacity: 0;
+}
+
+.tech-advert:hover > .sale-browse {
+  opacity: 1;
+}
+
+.sale {
+  display: inline-block;
+
+  padding: 5px 20px 5px 20px;
+  background-color: #ec2f2f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  transform: rotate(-45deg);
+
+  font-weight: bold;
+  position: absolute;
+  top: 855px;
+  left: 23px;
+
+  z-index: 1;
+}
+
+/* ------------------------------------------------------- */
+
+/* -------------------APPAREL ADVERT-------------------------- */
+
+.apparel-div {
+  position: absolute;
+  top: 950px;
+  left: 650px;
+}
+
+.apparel-advert {
+  margin: 50px 0 50px 50px;
+
+  background-image: url(https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
+  background-size: cover;
+  background-position: center bottom;
+  height: 500px;
+  width: 500px;
+}
+
+.apparel-advert:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
+}
+
+.apparel-advert > p {
+  opacity: 0;
+  font-size: 48px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.apparel-advert:hover > p {
+  opacity: 1;
+}
+
+.apparel-advert > .sale-browse {
+  opacity: 0;
+}
+
+.apparel-advert:hover > .sale-browse {
+  opacity: 1;
+}
+
+.sale-apparel {
+  display: inline-block;
+
+  padding: 5px 20px 5px 20px;
+  background-color: #ec2f2f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  font-weight: bold;
+  transform: rotate(-45deg);
+
+  position: absolute;
+  top: 53px;
+  left: 25px;
+
+  z-index: 1;
+}
+
+.ads {
+  margin-bottom: 350px;
+}
+
+/* ----------------------------------------------------------- */
+
+.btn-register {
+  padding: 10px 40px 10px 40px;
+  width: 230px;
+
+  background-color: black;
+  border: 1px solid black;
+  color: #e2e2e2;
+
+  border-radius: 50px;
+  font-size: 34px;
+  margin-left: 30px;
+
+  cursor: pointer;
+
+  position: absolute;
+  bottom: -210px;
+  right: 415px;
+}
+
+/* ---------------------------------FOOTER-------------------------------- */
+
+footer {
+  background-color: #202020;
+  width: 100vw;
+  height: 450px;
+}
+
+footer h1 {
+  font-size: 59px;
+  padding: 50px 0 0 30px;
+  letter-spacing: 5px;
+}
+
+footer h3 {
+  font-size: 24px;
+  padding: 10px 0 0 30px;
+  width: 450px;
+}
+
+.feedback {
+  margin: 0 0 0 780px;
+}
+
+.feedback button {
+  background-color: #e2e2e2;
+  border: 1px solid #202020;
+  color: #202020;
+  width: 300px;
+  font-size: 24px;
+  border-radius: 50px;
+
+  padding: 5px 20px 5px 20px;
+
+  margin-left: 8px;
+
+  cursor: pointer;
+}
+
+.feedback button:hover {
+  border: none;
+  background-color: transparent;
+  color: #e2e2e2;
+}
+
+.social {
+  position: absolute;
+  bottom: -885px;
+  right: 455px;
+}
+
+.social p {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.socialmedia {
+  padding-top: 10px;
+}
+
+.contact {
+  position: absolute;
+  bottom: -881px;
+  right: 155px;
+}
+
+.contact .contact-text {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.number {
+  font-size: 24px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.copyright {
+  margin-top: 150px;
+}
+/* ---------------------------------FOOTER-------------------------------- */
