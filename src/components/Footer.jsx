@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="feedback">
         <h2>Let us know what you think.</h2>
         <ArrowBendDownRight size={32} />
-        <button>Submit a Feedback</button>
+        <button>Submit Feedback</button>
       </div>
 
       <div className="social">

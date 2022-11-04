@@ -14,7 +14,7 @@
   left: 910px;
 
   font-size: 64px;
-  color: black;
+  color: #202020;
   letter-spacing: 1px;
 }
 
@@ -26,7 +26,7 @@
   font-weight: 300;
   font-size: 34px;
   width: 350px;
-  color: black;
+  color: #202020;
   letter-spacing: 1px;
 }
 
@@ -101,7 +101,7 @@
 
   border-radius: 50px;
   font-size: 34px;
-  margin-left: 30px;
+  margin-left: 60px;
 
   cursor: pointer;
 }
@@ -255,8 +255,8 @@
   padding: 10px 40px 10px 40px;
   width: 230px;
 
-  background-color: black;
-  border: 1px solid black;
+  background-color: #202020;
+  border: 1px solid #202020;
   color: #e2e2e2;
 
   border-radius: 50px;
@@ -351,3 +351,84 @@ footer h3 {
   margin-top: 150px;
 }
 /* ---------------------------------FOOTER-------------------------------- */
+
+/* -------------------------BROWSE JSX ----------------------------------- */
+
+.browse-title {
+  position: absolute;
+  top: 8%;
+  left: 48%;
+
+  transform: translate(-50%, -50%);
+  font-size: 39px;
+  letter-spacing: 5px;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-header {
+  height: 200px;
+  width: 100vw;
+
+  background-color: #202020;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+
+  padding-top: 176px;
+}
+
+.nav-ul button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* -----------Dropdown-------- */
+
+.dropdown-menu-apparel {
+  display: none;
+
+  position: absolute;
+  top: 200px;
+  left: 0;
+  height: 300px;
+  width: 100vw;
+  background-color: #cccccc;
+
+  padding-top: 20px;
+}
+
+.nav-ul li:hover .dropdown-menu-apparel {
+  display: block;
+}
+
+.dropdown-menu-apparel .drop-1 {
+  display: inline-block;
+  margin: 0 0 0 50px;
+
+  list-style: none;
+  font-size: 1.7rem;
+}
+
+.dropdown-menu-apparel .drop-1 h2 {
+  color: #202020;
+}
+
+.dropdown-menu-apparel button {
+  color: #202020;
+}
+
+.dropdown-menu-apparel:hover {
+  display: block;
+}
+
+/* --------------------------- */
+
+/* -------------------------BROWSE JSX ----------------------------------- */

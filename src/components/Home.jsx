@@ -12,8 +12,10 @@ const Home = () => {
       </div>
       <div className="introduction-hero">
         <h1>Shoplift NZ</h1>
-        <button className="btn-browse">Browse</button>
-        <button className="btn-clearance">Clearance</button>
+        <a className="btn-browse btn-empty" href="/browse">
+          Browse
+        </a>
+        <a className="btn-clearance">Clearance</a>
       </div>
 
       <div className="ads">
@@ -28,6 +30,5 @@ const Home = () => {
     </div>
   );
 };
-//helloss
 
 export default Home;
