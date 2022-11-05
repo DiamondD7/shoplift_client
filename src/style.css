@@ -390,6 +390,18 @@ footer h3 {
   font-size: 18px;
 }
 
+.nav-ul .feature-anchor {
+  font-size: 18px;
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+.nav-ul button a {
+  font-size: 18px;
+  color: #202020;
+  text-decoration: none;
+}
+
 /* -----------Dropdown-------- */
 
 .dropdown-menu-apparel {
@@ -403,6 +415,7 @@ footer h3 {
   background-color: #cccccc;
 
   padding-top: 20px;
+  z-index: 1;
 }
 
 .nav-ul li:hover .dropdown-menu-apparel {

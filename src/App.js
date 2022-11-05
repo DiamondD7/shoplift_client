@@ -12,6 +12,21 @@ const App = () => {
     case "/browse":
       component = <Browse />;
       break;
+    case "/men/jackets":
+      component = <Browse />;
+      break;
+    case "/men/hoodie":
+      component = <Browse />;
+      break;
+    case "/men/shirt":
+      component = <Browse />;
+      break;
+    case "/men/accessories":
+      component = <Browse />;
+      break;
+    case "/men/shoes":
+      component = <Browse />;
+      break;
     default:
       console.log("Switch error");
       break;

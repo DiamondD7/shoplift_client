@@ -1,6 +1,35 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import AllProducts from "./AllProducts";
+import Jackets from "./ApparelNav/MenSubNav/Jackets";
+import Hoodie from "./ApparelNav/MenSubNav/Hoodie";
+import Shirt from "./ApparelNav/MenSubNav/Shirt";
+import Accessories from "./ApparelNav/MenSubNav/Accessories";
+import Shoes from "./ApparelNav/MenSubNav/Shoes";
 const Browse = () => {
+  let component;
+  switch (window.location.pathname) {
+    case "/browse":
+      component = <AllProducts />;
+      break;
+    case "/men/jackets":
+      component = <Jackets />;
+      break;
+    case "/men/hoodie":
+      component = <Hoodie />;
+      break;
+    case "/men/shirt":
+      component = <Shirt />;
+      break;
+    case "/men/accessories":
+      component = <Accessories />;
+      break;
+    case "/men/shoes":
+      component = <Shoes />;
+      break;
+    default:
+      console.log("Switch in browse error");
+      break;
+  }
   return (
     <div>
       <div className="nav-header">
@@ -16,19 +45,29 @@ const Browse = () => {
                   <h2>Men</h2>
                 </li>
                 <li>
-                  <button>Jackets</button>
+                  <button>
+                    <a href="/men/jackets">Jackets</a>
+                  </button>
                 </li>
                 <li>
-                  <button>Hoodies</button>
+                  <button>
+                    <a href="/men/hoodie">Hoodies</a>
+                  </button>
                 </li>
                 <li>
-                  <button>Shirts</button>
+                  <button>
+                    <a href="/men/shirt">Shirts</a>
+                  </button>
                 </li>
                 <li>
-                  <button>Accessories</button>
+                  <button>
+                    <a href="/men/accessories">Accessories</a>
+                  </button>
                 </li>
                 <li>
-                  <button>Shoes</button>
+                  <button>
+                    <a href="/men/shoes">Shoes</a>
+                  </button>
                 </li>
               </ul>
 
@@ -678,10 +717,16 @@ const Browse = () => {
             </div>
           </li>
           <li>
-            <button>Deals</button>
+            <button>
+              <a className="feature-anchor" href="/browse">
+                Features
+              </a>
+            </button>
           </li>
         </ul>
       </div>
+
+      {component}
     </div>
   );
 };
