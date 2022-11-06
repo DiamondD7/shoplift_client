@@ -70,7 +70,7 @@
 .introduction-hero {
   position: absolute;
   top: 35%;
-  left: 47.5%;
+  left: 48.3%;
 
   transform: translate(-50%, -50%);
 }
@@ -173,6 +173,7 @@
   letter-spacing: 2px;
 
   transform: rotate(-45deg);
+  color: #e2e2e2;
 
   font-weight: bold;
   position: absolute;
@@ -213,10 +214,20 @@
 
   display: flex;
   justify-content: center;
+  color: #e2e2e2;
 }
 
 .apparel-advert:hover > p {
   opacity: 1;
+}
+
+.tech-advert > p {
+  opacity: 0;
+  font-size: 48px;
+
+  display: flex;
+  justify-content: center;
+  color: #e2e2e2;
 }
 
 .apparel-advert > .sale-browse {
@@ -234,6 +245,7 @@
   background-color: #ec2f2f;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #e2e2e2;
 
   font-weight: bold;
   transform: rotate(-45deg);
@@ -324,6 +336,7 @@ footer h3 {
 .social p {
   font-size: 24px;
   text-transform: uppercase;
+  color: #e2e2e2;
 }
 
 .socialmedia {
@@ -339,12 +352,14 @@ footer h3 {
 .contact .contact-text {
   font-size: 24px;
   text-transform: uppercase;
+  color: #e2e2e2;
 }
 
 .number {
   font-size: 24px;
   padding-top: 10px;
   font-weight: bold;
+  color: #e2e2e2;
 }
 
 .copyright {
@@ -445,3 +460,25 @@ footer h3 {
 /* --------------------------- */
 
 /* -------------------------BROWSE JSX ----------------------------------- */
+
+/* ------------------------CART------------------------------------------- */
+.cart-number {
+  position: absolute;
+  top: 245px;
+  right: 55px;
+
+  border-radius: 50px;
+  display: inline-block;
+  color: #ec2f2f;
+  font-size: 22px;
+}
+
+.btn-cart {
+  position: absolute;
+  top: 265px;
+  right: 60px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -5,6 +5,7 @@ import Hoodie from "./ApparelNav/MenSubNav/Hoodie";
 import Shirt from "./ApparelNav/MenSubNav/Shirt";
 import Accessories from "./ApparelNav/MenSubNav/Accessories";
 import Shoes from "./ApparelNav/MenSubNav/Shoes";
+import { ShoppingCartSimple } from "phosphor-react";
 const Browse = () => {
   let component;
   switch (window.location.pathname) {
@@ -30,6 +31,8 @@ const Browse = () => {
       console.log("Switch in browse error");
       break;
   }
+
+  const num = 3;
   return (
     <div>
       <div className="nav-header">
@@ -726,6 +729,10 @@ const Browse = () => {
         </ul>
       </div>
 
+      <p className="cart-number">{num}</p>
+      <button className="btn-cart">
+        <ShoppingCartSimple size={32} color={"#202020"} />
+      </button>
       {component}
     </div>
   );
