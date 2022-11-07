@@ -5,12 +5,22 @@ import Hoodie from "./ApparelNav/MenSubNav/Hoodie";
 import Shirt from "./ApparelNav/MenSubNav/Shirt";
 import Accessories from "./ApparelNav/MenSubNav/Accessories";
 import Shoes from "./ApparelNav/MenSubNav/Shoes";
-import { ShoppingCartSimple } from "phosphor-react";
+import { ShoppingCartSimple, X } from "phosphor-react";
 const Browse = () => {
+  const [cartCounter, setCartCounter] = useState(0);
+  const [cartItems, setCartItems] = useState(null);
+  const [qty, setQty] = useState(0);
+  const [openCart, setOpenCart] = useState(false);
   let component;
+
+  const addCart = (i, currentArr, qty) => {
+    setCartCounter(i);
+    setCartItems(currentArr);
+    setQty(qty);
+  };
   switch (window.location.pathname) {
     case "/browse":
-      component = <AllProducts />;
+      component = <AllProducts cartFunc={addCart} />;
       break;
     case "/men/jackets":
       component = <Jackets />;
@@ -32,7 +42,23 @@ const Browse = () => {
       break;
   }
 
-  const num = 3;
+  const bod = document.getElementById("body--");
+  if (openCart === true) {
+    bod.style.overflow = "hidden";
+  } else {
+    bod.style.overflow = "scroll";
+  }
+
+  const qtyIncrease = () => {
+    setQty((prevQty) => prevQty + 1);
+  };
+
+  const qtyDecrease = () => {
+    if (qty === 1) {
+      return qty;
+    }
+    setQty((prevQty) => prevQty - 1);
+  };
   return (
     <div>
       <div className="nav-header">
@@ -729,10 +755,55 @@ const Browse = () => {
         </ul>
       </div>
 
-      <p className="cart-number">{num}</p>
-      <button className="btn-cart">
+      {cartCounter > 0 ? <p className="cart-number">{cartCounter}</p> : ""}
+      <button className="btn-cart" onClick={() => setOpenCart(!openCart)}>
         <ShoppingCartSimple size={32} color={"#202020"} />
       </button>
+
+      {openCart === true ? (
+        <div>
+          <div className="overlay"></div>
+          <button className="x-icon" onClick={() => setOpenCart(!openCart)}>
+            <X size={42} />
+          </button>
+          {cartItems === null ? (
+            <div className="cart-container">
+              <div className="cart-modal">
+                <h1>No items in your cart!</h1>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div className="cart-container">
+                <div className="cart-modal">
+                  <img className="" src={cartItems.productImage} />
+                  <div className="cart-product-details">
+                    <h1>{cartItems.productName}</h1>
+                    <p>${cartItems.productPrice}</p>
+                    <div className="product-quantity">
+                      <button className="btn-decrease" onClick={qtyDecrease}>
+                        -
+                      </button>
+                      <p className="counter-cart">{qty}</p>
+                      <button className="btn-increase" onClick={qtyIncrease}>
+                        +
+                      </button>
+                    </div>
+                    <p>Qty: {qty}</p>
+                  </div>
+                </div>
+                <button className="btn-remove">Remove</button>
+                <h2>Total: ${cartItems.productPrice * qty}</h2>
+                <p>Powered by SierraBank</p>
+                <button className="paynow">Pay Now</button>
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        ""
+      )}
+
       {component}
     </div>
   );

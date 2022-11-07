@@ -3,7 +3,7 @@ import Details from "./ProductDetails/Details";
 
 import "../styles/allproductStyle.css";
 
-const AllProducts = () => {
+const AllProducts = (props) => {
   const [items, setItems] = useState([]);
 
   const [currentItems, setCurrentitems] = useState([]);
@@ -27,7 +27,7 @@ const AllProducts = () => {
   return (
     <div className="cont-div">
       {isOpen ? (
-        <Details current={currentItems} />
+        <Details current={currentItems} cartfunc={props.cartFunc} />
       ) : (
         <div>
           <h1 className="title-h1">Featured Items</h1>

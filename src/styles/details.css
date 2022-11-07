@@ -43,3 +43,63 @@
   margin-top: 50px;
   color: rgba(0, 0, 0, 0.6);
 }
+
+/* ------------PRODUCT QUANTITY BUTTONS------------- */
+
+.product-quantity {
+  display: flex;
+  margin-top: 40px;
+}
+
+.btn-increase {
+  background-color: transparent;
+  border: none;
+  font-size: 34px;
+  color: #202020;
+
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.counter {
+  font-size: 30px;
+}
+
+.btn-decrease {
+  background-color: transparent;
+  border: none;
+  font-size: 34px;
+  color: #202020;
+
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+/* ------------PRODUCT QUANTITY BUTTONS------------- */
+
+/* ------------Transaction Buttons ----------------- */
+
+.transactions-btn {
+  margin: 20px 0 50px 0;
+}
+
+.btn-addtocart {
+  font-size: 34px;
+  color: #202020;
+  padding: 5px 20px 5px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-buynow {
+  font-size: 34px;
+  color: #e2e2e2;
+  padding: 5px 20px 5px 20px;
+  background-color: #202020;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+/* ------------Transaction Buttons ----------------- */
