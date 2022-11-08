@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./components/Home";
 import Browse from "./components/Browse";
+import Clearance from "./components/Clearance";
+import ProductBuy from "./components/ProductBuy";
 
 const App = () => {
   let component;
@@ -26,6 +28,13 @@ const App = () => {
       break;
     case "/men/shoes":
       component = <Browse />;
+      break;
+    case "/clearance":
+      component = <Browse />;
+      break;
+
+    case "/buy":
+      component = <ProductBuy />;
       break;
     default:
       console.log("Switch error");

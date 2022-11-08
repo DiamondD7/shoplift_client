@@ -8,7 +8,9 @@ const Apparel = () => {
         <div className="apparel-advert">
           <p>Apparel Sales</p>
           <button className="sale-browse">
-            Browse <ArrowRight size={30} />
+            <a className="ad-btn-anchor" href="/men/shirt">
+              Browse <ArrowRight size={30} />
+            </a>
           </button>
         </div>
 

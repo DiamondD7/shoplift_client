@@ -20,22 +20,27 @@ const Browse = () => {
   };
   switch (window.location.pathname) {
     case "/browse":
-      component = <AllProducts cartFunc={addCart} />;
+      component = (
+        <AllProducts headerTitle="Featured Items" cartFunc={addCart} />
+      );
+      break;
+    case "/clearance":
+      component = <AllProducts headerTitle="Clearance" cartFunc={addCart} />;
       break;
     case "/men/jackets":
-      component = <Jackets />;
+      component = <Jackets cartFunc={addCart} />;
       break;
     case "/men/hoodie":
-      component = <Hoodie />;
+      component = <Hoodie cartFunc={addCart} />;
       break;
     case "/men/shirt":
-      component = <Shirt />;
+      component = <Shirt cartFunc={addCart} />;
       break;
     case "/men/accessories":
-      component = <Accessories />;
+      component = <Accessories cartFunc={addCart} />;
       break;
     case "/men/shoes":
-      component = <Shoes />;
+      component = <Shoes cartFunc={addCart} />;
       break;
     default:
       console.log("Switch in browse error");
@@ -58,6 +63,15 @@ const Browse = () => {
       return qty;
     }
     setQty((prevQty) => prevQty - 1);
+  };
+
+  const onRemove = () => {
+    setCartCounter(0);
+    setCartItems(null);
+  };
+
+  const shoppingContinue = () => {
+    window.location.reload();
   };
   return (
     <div>
@@ -770,6 +784,9 @@ const Browse = () => {
             <div className="cart-container">
               <div className="cart-modal">
                 <h1>No items in your cart!</h1>
+                <button className="paynow" onClick={shoppingContinue}>
+                  Continue Shopping
+                </button>
               </div>
             </div>
           ) : (
@@ -792,10 +809,16 @@ const Browse = () => {
                     <p>Qty: {qty}</p>
                   </div>
                 </div>
-                <button className="btn-remove">Remove</button>
+                <button className="btn-remove" onClick={onRemove}>
+                  Remove
+                </button>
                 <h2>Total: ${cartItems.productPrice * qty}</h2>
                 <p>Powered by SierraBank</p>
-                <button className="paynow">Pay Now</button>
+                <button className="paynow">
+                  <a className="ad-btn-anchor" href="/buy">
+                    Pay Now
+                  </a>
+                </button>
               </div>
             </div>
           )}

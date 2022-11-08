@@ -1,0 +1,44 @@
+.buy-statement {
+  font-size: 58px;
+  color: #202020;
+
+  text-align: center;
+}
+
+.confirmation {
+  font-size: 34px;
+  text-align: center;
+}
+
+.icon-check {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.inbox {
+  font-size: 32px;
+  margin-right: 50px;
+  margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  color: #202020;
+}
+
+.inbox a {
+  color: #202020;
+  text-decoration: none;
+}
+
+.Home {
+  font-size: 32px;
+  background-color: #202020;
+  color: #e2e2e2;
+
+  padding: 5px 20px 5px 20px;
+  border-radius: 10px;
+}
+
+.btn-buy-confirmation {
+  text-align: center;
+  margin-top: 50px;
+}

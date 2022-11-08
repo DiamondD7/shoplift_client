@@ -30,7 +30,7 @@ const AllProducts = (props) => {
         <Details current={currentItems} cartfunc={props.cartFunc} />
       ) : (
         <div>
-          <h1 className="title-h1">Featured Items</h1>
+          <h1 className="title-h1">{props.headerTitle}</h1>
           <div className="cont">
             {items.map((item, index) => (
               <div className="card-container" key={index}>

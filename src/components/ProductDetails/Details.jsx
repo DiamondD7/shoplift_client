@@ -18,6 +18,7 @@ const Details = (props) => {
 
   const addCart = () => {
     setNumCart((prevNumCart) => prevNumCart + 1);
+
     props.cartfunc(numCart, props.current, counter);
   };
 

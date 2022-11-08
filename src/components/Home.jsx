@@ -15,7 +15,9 @@ const Home = () => {
         <a className="btn-browse btn-empty" href="/browse">
           Browse
         </a>
-        <a className="btn-clearance">Clearance</a>
+        <a className="btn-clearance" href="/clearance">
+          Clearance
+        </a>
       </div>
 
       <div className="ads">

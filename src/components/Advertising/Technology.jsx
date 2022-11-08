@@ -8,7 +8,9 @@ const Technology = () => {
         <div className="tech-advert">
           <p>Tech Sales</p>
           <button className="sale-browse">
-            Browse <ArrowRight size={30} />
+            <a className="ad-btn-anchor" href="/browse">
+              Browse <ArrowRight size={30} />
+            </a>
           </button>
         </div>
         <p className="sale">Sale</p>
