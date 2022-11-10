@@ -283,6 +283,10 @@
   right: 415px;
 }
 
+.btn-register a {
+  text-decoration: none;
+}
+
 /* ---------------------------------FOOTER-------------------------------- */
 
 footer {

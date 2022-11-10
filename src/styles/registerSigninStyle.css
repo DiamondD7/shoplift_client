@@ -1,12 +1,11 @@
 .register-h1 {
   font-size: 42px;
   color: #202020;
-  margin: 50px 0 0 50px;
 }
 
 .fname-label {
   color: #202020;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .fname-input {
@@ -15,8 +14,134 @@
 
   padding: 10px;
   color: #202020;
+
+  margin-bottom: 15px;
 }
 
 .form-container {
-  margin: 50px 0 0 50px;
+  margin: 50px 0 0 0;
+}
+
+.form-div {
+  display: flex;
+  margin-left: 50px;
+  /* position: absolute;
+  top: 120px;
+  left: 50px; */
+
+  /* border: 1px solid #202020; */
+  border-right: 1px solid #202020;
+  box-shadow: 10px 0 5px -2px rgba(244, 244, 244, 0.5);
+  width: 43%;
+  height: 100vh;
+}
+
+.btn-regSubmit {
+  background-color: #202020;
+  border: 1px solid #202020;
+  color: #e2e2e2;
+
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 34px;
+  padding: 10px;
+}
+
+.btn-regCancel {
+  background-color: transparent;
+  border: none;
+  color: #202020;
+
+  margin-right: 20px;
+  font-size: 34px;
+  padding: 10px;
+
+  cursor: pointer;
+}
+
+.btn-regCancel a {
+  color: #202020;
+  text-decoration: none;
+}
+
+.RegisterBody {
+  display: flex;
+}
+
+.second-div {
+  /* background-color: #202020; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1639942941591-08b5745428cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+
+  background-size: cover;
+  background-position: center;
+  width: 55%;
+  height: 100vh;
+}
+
+.register-statement {
+  position: absolute;
+  top: 300px;
+  right: 450px;
+  font-size: 80px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.register-p {
+  position: absolute;
+  top: 420px;
+  right: 0px;
+  color: #e2e2e2;
+
+  font-size: 30px;
+  line-height: 1.5;
+
+  width: 900px;
+}
+
+/* ------------------------------------- */
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.validation--icon {
+  width: 25px;
+  margin-bottom: 8px;
+}
+
+.instructions {
+  /* position: absolute;
+  top: 50%;
+  left: 25%; */
+  color: red;
+}
+
+.instructionsPwd {
+  /* position: absolute;
+  top: 57%;
+  left: 5%; */
+  color: red;
+}
+
+.instructionsConfPwd {
+  /* position: absolute;
+  top: 68%;
+  left: 5%; */
+  color: red;
+}
+
+.offscreen {
+  display: none;
 }

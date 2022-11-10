@@ -18,8 +18,14 @@ const Details = (props) => {
 
   const addCart = () => {
     setNumCart((prevNumCart) => prevNumCart + 1);
+    const isAddedToCart = false;
+    props.cartfunc(numCart, props.current, counter, isAddedToCart);
+  };
 
-    props.cartfunc(numCart, props.current, counter);
+  const buyCart = () => {
+    const isBuyOpen = true;
+    setNumCart((prevNumCart) => prevNumCart + 1);
+    props.cartfunc(numCart, props.current, counter, isBuyOpen);
   };
 
   return (
@@ -60,7 +66,9 @@ const Details = (props) => {
               <button className="btn-addtocart" onClick={addCart}>
                 Add to Cart
               </button>
-              <button className="btn-buynow">Buy Now</button>
+              <button className="btn-buynow" onClick={buyCart}>
+                Buy Now
+              </button>
             </div>
           </div>
         </div>

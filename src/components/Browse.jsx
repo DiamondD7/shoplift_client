@@ -13,10 +13,11 @@ const Browse = () => {
   const [openCart, setOpenCart] = useState(false);
   let component;
 
-  const addCart = (i, currentArr, qty) => {
+  const addCart = (i, currentArr, qty, isOpen) => {
     setCartCounter(i);
     setCartItems(currentArr);
     setQty(qty);
+    setOpenCart(isOpen);
   };
   switch (window.location.pathname) {
     case "/browse":
