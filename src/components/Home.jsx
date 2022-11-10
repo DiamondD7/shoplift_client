@@ -26,7 +26,9 @@ const Home = () => {
       </div>
       <h2 className="header-2">Buy less. Save more.</h2>
       <h3 className="header-3">Have a membership? Save even more.</h3>
-      <button className="btn-register">Register</button>
+      <button className="btn-register">
+        <a href="/users">Register</a>
+      </button>
 
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Browse from "./components/Browse";
 import Clearance from "./components/Clearance";
 import ProductBuy from "./components/ProductBuy";
+import Register from "./components/Authentication/Register";
 
 const App = () => {
   let component;
@@ -35,6 +36,9 @@ const App = () => {
 
     case "/buy":
       component = <ProductBuy />;
+      break;
+    case "/users":
+      component = <Register />;
       break;
     default:
       console.log("Switch error");
