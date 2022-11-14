@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
 import Browse from "./components/Browse";
-import Clearance from "./components/Clearance";
 import ProductBuy from "./components/ProductBuy";
 import Register from "./components/Authentication/Register";
 
@@ -31,6 +30,9 @@ const App = () => {
       component = <Browse />;
       break;
     case "/clearance":
+      component = <Browse />;
+      break;
+    case "/women/dress":
       component = <Browse />;
       break;
 
