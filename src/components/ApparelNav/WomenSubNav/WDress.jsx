@@ -7,7 +7,7 @@ const WDress = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/wdress")
+    fetch("https://shopliftserver.azurewebsites.net/wdress")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

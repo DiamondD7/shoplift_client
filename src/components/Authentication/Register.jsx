@@ -59,7 +59,7 @@ const Register = () => {
       return;
     }
 
-    fetch("http://localhost:5000/users/add", {
+    fetch("https://shopliftserver.azurewebsites.net/users/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

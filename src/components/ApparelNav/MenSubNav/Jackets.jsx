@@ -6,7 +6,7 @@ const Jackets = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentItems, setCurrentitems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/jackets")
+    fetch("https://shopliftserver.azurewebsites.net/jackets")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -14,7 +14,7 @@ const Clearance = (props) => {
   const [openCart, setOpenCart] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://shopliftserver.azurewebsites.net/products")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
