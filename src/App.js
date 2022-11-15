@@ -35,6 +35,9 @@ const App = () => {
     case "/women/dress":
       component = <Browse />;
       break;
+    case "/women/hoodies":
+      component = <Browse />;
+      break;
 
     case "/buy":
       component = <ProductBuy />;

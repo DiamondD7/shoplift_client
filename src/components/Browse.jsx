@@ -7,6 +7,7 @@ import Accessories from "./ApparelNav/MenSubNav/Accessories";
 import Shoes from "./ApparelNav/MenSubNav/Shoes";
 import { ShoppingCartSimple, X } from "phosphor-react";
 import WDress from "./ApparelNav/WomenSubNav/WDress";
+import WHoodies from "./ApparelNav/WomenSubNav/WHoodies";
 const Browse = () => {
   const [cartCounter, setCartCounter] = useState(0);
   const [cartItems, setCartItems] = useState(null);
@@ -46,6 +47,9 @@ const Browse = () => {
       break;
     case "/women/dress":
       component = <WDress cartFunc={addCart} />;
+      break;
+    case "/women/hoodies":
+      component = <WHoodies cartFunc={addCart} />;
       break;
     default:
       console.log("Switch in browse error");
@@ -129,7 +133,9 @@ const Browse = () => {
                   </button>
                 </li>
                 <li>
-                  <button>Hoodies</button>
+                  <button>
+                    <a href="/women/hoodies">Hoodies</a>
+                  </button>
                 </li>
                 <li>
                   <button>Crop-tops</button>
