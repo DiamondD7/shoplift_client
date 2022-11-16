@@ -608,3 +608,24 @@ footer h3 {
 }
 
 /* -------AD BUTTON-------- */
+
+.success-login-div {
+  margin: auto;
+  padding-top: 200px;
+}
+
+.suc-h1 {
+  color: #202020;
+  letter-spacing: 1px;
+  font-size: 64px;
+}
+
+.anchorHome {
+  color: #202020;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+.anchorHome:hover {
+  text-decoration: underline;
+}

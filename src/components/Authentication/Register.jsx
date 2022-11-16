@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import { ArrowRight } from "phosphor-react";
 import "../../styles/registerSigninStyle.css";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
@@ -83,11 +83,14 @@ const Register = () => {
   return (
     <div className="RegisterBody">
       {success ? (
-        <div>
-          <h1>Success!</h1>
+        <div className="success-login-div">
+          <h1 className="suc-h1">Success!</h1>
 
           <span>
-            <a href="/SignIn">Sign in</a>
+            <a className="anchorHome" href="/">
+              Home
+              <ArrowRight size={23} color={"#202020"} />
+            </a>
           </span>
         </div>
       ) : (
