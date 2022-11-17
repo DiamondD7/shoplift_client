@@ -5,6 +5,7 @@ import "../styles/allproductStyle.css";
 
 const AllProducts = (props) => {
   const [items, setItems] = useState([]);
+  const [itemsLoaded, setItemsLoaded] = useState(false);
 
   const [currentItems, setCurrentitems] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ const AllProducts = (props) => {
       .then((data) => {
         console.log(data);
         setItems(data);
+        setItemsLoaded(true);
       });
   }, []);
 
@@ -28,7 +30,7 @@ const AllProducts = (props) => {
     <div className="cont-div">
       {isOpen ? (
         <Details current={currentItems} cartfunc={props.cartFunc} />
-      ) : (
+      ) : itemsLoaded === true ? (
         <div>
           <h1 className="title-h1">{props.headerTitle}</h1>
           <div className="cont">
@@ -46,6 +48,10 @@ const AllProducts = (props) => {
               </div>
             ))}
           </div>
+        </div>
+      ) : (
+        <div className="loading">
+          <p>Loading...</p>
         </div>
       )}
     </div>

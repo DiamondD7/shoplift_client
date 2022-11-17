@@ -3,6 +3,7 @@ import Details from "../../ProductDetails/Details";
 
 const Jackets = (props) => {
   const [items, setItems] = useState([]);
+  const [itemsLoaded, setItemsLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [currentItems, setCurrentitems] = useState([]);
   useEffect(() => {
@@ -11,6 +12,7 @@ const Jackets = (props) => {
       .then((data) => {
         console.log(data);
         setItems(data);
+        setItemsLoaded(true);
       });
   }, []);
 
@@ -24,7 +26,7 @@ const Jackets = (props) => {
     <div className="cont-div">
       {isOpen ? (
         <Details current={currentItems} cartfunc={props.cartFunc} />
-      ) : (
+      ) : itemsLoaded === true ? (
         <div>
           <h1 className="title-h1">Jackets</h1>
           <div className="cont">
@@ -42,6 +44,10 @@ const Jackets = (props) => {
               </div>
             ))}
           </div>
+        </div>
+      ) : (
+        <div className="loading">
+          <p>Loading...</p>
         </div>
       )}
     </div>

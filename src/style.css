@@ -629,3 +629,7 @@ footer h3 {
 .anchorHome:hover {
   text-decoration: underline;
 }
+
+.loading p {
+  font-size: 32px;
+}

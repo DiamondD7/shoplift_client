@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Details from "../../ProductDetails/Details";
 const Shoes = (props) => {
   const [items, setItems] = useState([]);
+  const [itemsLoaded, setItemsLoaded] = useState(false);
   const [currentItems, setCurrentitems] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,6 +12,7 @@ const Shoes = (props) => {
       .then((data) => {
         console.log(data);
         setItems(data);
+        setItemsLoaded(true);
       });
   }, []);
 
@@ -23,7 +25,7 @@ const Shoes = (props) => {
     <div className="cont-div">
       {isOpen ? (
         <Details current={currentItems} cartfunc={props.cartFunc} />
-      ) : (
+      ) : itemsLoaded === true ? (
         <div>
           <h1 className="title-h1">Shoes</h1>
           <div className="cont">
@@ -41,6 +43,10 @@ const Shoes = (props) => {
               </div>
             ))}
           </div>
+        </div>
+      ) : (
+        <div className="loading">
+          <p>Loading...</p>
         </div>
       )}
     </div>
